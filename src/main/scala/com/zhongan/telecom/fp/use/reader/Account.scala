@@ -18,10 +18,10 @@ import common._
   * quota:信用额度
   */
 case class Account(
-      id:String,
       no:String,
+      name:String,
       openDate:java.util.Date = today, //开户时间
-      quota:Quota                      //账户额度
+      quota:Quota = Quota(0)           //账户额度
 );
 
 case class Quota(balance:Amount)
